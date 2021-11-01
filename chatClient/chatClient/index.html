@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<title> Chat Client </title>
+<script src="http://localhost:9992/socket.io/socket.io.js"></script>
+<script src="lib/vue.global.prod.js"></script>
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+<h1>Chat Client</h1>
+
+<div id="app">
+    <h2 ref="user"></h2>
+    <p v-if="!userRegistered">
+        <input v-model="username"><button @click="joinHandler">Join</button>
+    </p>
+    <p v-else>
+        <input v-model="text"><button @click="clickHandler">Send</button>
+        <br>
+        <button class="leave-btn" @click="leaveHandler">Leave</button>
+    </p>
+
+    <p v-if="messages.length == 0">No messages yet.</p>
+    <ul v-else>
+        <li v-for="msg in messages">{{ msg }}</li>
+    </ul>
+
+</div>
+
+<hr>
+<p id="info">
+MTD280 Online Multimedia (<a href="http://www.fh-ooe.at/mtd">MTD</a>)<br>
+</p>
+<script src="script.js"></script>
+</body>
+</html>

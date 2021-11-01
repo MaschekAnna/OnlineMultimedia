@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Local Storage</title>
+    <script src="lib/vue.global.prod.js"></script>
+    <script src="https://kit.fontawesome.com/53a32e2c37.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+<h1>Local Storage Example</h1>
+
+<div id="app">
+    <p v-if="!notesData.length">Sorry, there are no entries</p>
+    <ul v-else>
+        <li v-for="(note, index) in notesData">
+            <em>{{ note.date }}</em> -- {{ note.content }}
+            <button v-on:click="deleteElement(index)" class="delete-item"><i class="far fa-trash-alt"></i></button>
+        </li>
+    </ul>
+
+    <textarea v-model="contents"></textarea><br>
+    <button v-on:click="saveData">Save</button>
+
+    <button v-on:click="clearData">Delete All</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

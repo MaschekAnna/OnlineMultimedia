@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<title>Gomoku Board</title>
+<script src="lib/vue.global.prod.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+<h1>Gomoku Board</h1>
+
+<div id="app">
+    <h3 class="info">{{ message }}</h3>
+    <h3 v-if="!gameFinished">{{ "It's " + colorOnTurn + "'s turn" }}</h3>
+    <canvas width="500" height="500" ref="canvas" @click="clickHandler"></canvas>
+
+    <br>
+
+    <button v-on:click="changeStoneSet">change stone set</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

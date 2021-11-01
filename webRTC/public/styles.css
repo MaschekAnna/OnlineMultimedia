@@ -1,0 +1,53 @@
+#info{
+font-size: small;
+}
+
+ul{
+    list-style-type: none;
+}
+
+li{
+    margin: 8px 0;
+    line-break: anywhere;
+}
+
+
+
+body{
+    font-family: Arial, Verdena, sans-serif;
+    color: #232323;
+}
+
+button{
+    background: #FFD07F;
+    color: #232323;
+    border: #E26A2C solid 1px;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    transition: background-color 3ms ease-in;
+}
+
+.leave-btn{
+    margin-left: 0;
+}
+
+button:hover{
+    background: #FDA65D;
+}
+
+button:active{
+    background: #FF8243;
+}
+
+input{
+    border: #E26A2C solid 1px;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    font-family: Arial, Verdena, sans-serif;
+    color: #232323;
+}
+
+input:focus{
+    outline: none;
+}

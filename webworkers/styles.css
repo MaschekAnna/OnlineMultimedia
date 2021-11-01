@@ -1,0 +1,53 @@
+body{
+    font-family: Arial, Verdena, sans-serif;
+    color: #232323;
+}
+
+button{
+    background: #FFD07F;
+    color: #232323;
+    border: #E26A2C solid 1px;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    transition: background-color 3ms ease-in;
+}
+button:first-of-type{
+    margin-left:0rem;
+}
+
+button:hover{
+    background: #FDA65D;
+}
+
+button:active{
+    background: #FF8243;
+}
+
+textarea{
+    border: #E26A2C solid 1px;
+    border-radius: 5px;
+
+    font-family: Arial, Verdena, sans-serif;
+    color: #232323;
+}
+
+textarea:active{
+    outline: none;
+}
+.delete-item{
+    border: none;
+    background-color: transparent;
+    color: #FDA65D;
+}
+
+.delete-item:hover, .delete-item:active{
+    border: none;
+    background-color: transparent;
+    color: #E26A2C;
+}
+
+ul{
+    list-style-position: inside;
+    padding-left: 0;
+}
